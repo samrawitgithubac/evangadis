@@ -1,0 +1,111 @@
+.signUp {
+  background-image: url("../../Asset/image/10001.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  height: 100vh;
+  background-repeat: no-repeat;
+  width: 100%;
+  margin: auto;
+}
+.signUp__container {
+  width: 89%;
+  padding-top: 113px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  font-size: 15px;
+  font-weight: 400;
+}
+.button_wrapper{
+  padding:4% 39% 4% 31.5% ;
+}
+.signUp__form {
+  position: relative;
+  width: 550px;
+  height: 548px;
+  border-radius: 10px;
+  padding: 40px;
+  background-color: #fff;
+
+  text-align: center;
+  box-shadow: 0 0.5rem 1rem #00000026 !important;
+  border: 2px #fff solid;
+  opacity: 1;
+  line-height: 1.4rem;
+  color: #344767;
+}
+.reset__password {
+  padding-top: 16%;
+  font-weight: 700;
+}
+.reset__password h6 {
+  font-size: 20px;
+  font-weight: bold;
+   color: #344767;
+}
+.reset__password p {
+  font-size: 16px;
+  font-weight: 500;
+   color: #67748e;
+   margin-bottom: 30px;
+}
+.email_Wrapper {
+  margin-bottom: 10px;
+}
+.lastContainer_wrapper {
+  padding: 4% 55% 0 0;
+  color: #fe8402;
+  font-size: 17px;
+}
+.link_wrapper {
+  margin-bottom: 3%;
+}
+.link_wrapper a {
+  text-decoration: none;
+  color: #fe8402;
+}
+.signUplink_Wrapper button {
+  text-decoration: none;
+  color: #fe8402;
+  padding-right: 7%;
+}
+.email_Wrapper input{
+   padding: 3% 59% 3% 3%;
+  border: 0.2px solid rgb(183, 181, 181);
+  border-radius: 3px;
+  background-Color: #E8F0FE;
+}
+.reset_button {
+  padding-top: 3%;
+    font-size: 18px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+    text-align: center;
+    color: white;
+    background-color: #516cf0;
+    margin: 20px 0 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+    .reset_button button{
+      background-color:#516cf0 ;
+      color:white;
+    }
+
+@media (max-width: 768px) {
+
+.email_Wrapper input{
+width: 100%;
+}
+  
+.reset_button{
+  width: 100%;
+  height: 43px;
+  padding-top: 9.75px;
+} 
+}
