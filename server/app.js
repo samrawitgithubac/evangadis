@@ -1,17 +1,22 @@
 require("dotenv").config();
 const express = require("express");
-const cors =require("cors")
+const cors = require("cors");
 const app = express();
 const port = 5000;
 const authMiddleware = require("./middleware/authMiddleware");
-
 
 /************************************************************************************** */
 /******************************db connection*********************************************/
 /************************************************************************************** */
 
 const dbconnection = require("./db/dbConfig");
-app.use(cors())
+app.use(
+  cors({
+    orgin: ["https://deploy-1whq.vercel.app"],
+    methods: ["post", "get"],
+    credentials: true,
+  })
+);
 
 /************************************************************************************** */
 /*************************Route middleware for creating tables***************************/
@@ -19,7 +24,6 @@ app.use(cors())
 
 const createTablesRoute = require("./db/create-Tables");
 app.use("/install", createTablesRoute);
-
 
 /************************************************************************************** */
 /*************************user routes middleware file***********************************/
@@ -29,7 +33,6 @@ const userRoutes = require("./routes/userRoutes");
 
 //user middleware to extract json data
 app.use(express.json());
-
 
 /************************************************************************************** */
 /*************************user routes middleware****************************************/
@@ -53,23 +56,19 @@ start();
 /************************question routes middleware file*********************************/
 /************************************************************************************** */
 
-
 const questionRoutes = require("./routes/questionRoutes");
 
 /************************************************************************************** */
 /************************question routes middleware*************************************/
 /************************************************************************************** */
 
-
 app.use("/api/question", authMiddleware, questionRoutes);
-
 
 /************************************************************************************** */
 /************************answer routes middleware file*********************************/
 /************************************************************************************** */
 
 const answerRoutes = require("./routes/answerRoute");
-
 
 /************************************************************************************** */
 /************************Answer routes middleware*********************************/
